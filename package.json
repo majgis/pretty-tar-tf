@@ -1,7 +1,7 @@
 {
   "name": "pretty-tar-tf",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pretty print data piped from tar -tf for npm packaged .tgz files.",
   "main": "index.js",
   "bin": {
     "pretty-tar-tf": "bin/pretty-tar-tf.js"
