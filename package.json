@@ -11,5 +11,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majgis/pretty-tar-tf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/majgis/pretty-tar-tf/issues"
+  },
+  "homepage": "https://github.com/majgis/pretty-tar-tf#readme"
 }
