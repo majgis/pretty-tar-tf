@@ -10,10 +10,8 @@
 var stdin = process.openStdin()
 var eol = require('os').EOL
 var sep = require('path').sep
-var data = []
 var packageNames = {}
 var otherFiles = {}
-
 
 stdin.on('data', function onChunk (chunk) {
   var split = chunk.toString('utf8').split(eol)
@@ -42,10 +40,9 @@ stdin.on('end', function onEnd () {
     keys.push(key)
   }
   keys.sort()
-  var indent = ''
+  var indent
   for (var keyIndex = 0; keyIndex < keys.length; keyIndex++) {
     key = keys[keyIndex]
-    var indent
     if (key) {
       indent = '  '
       console.log()
@@ -61,10 +58,11 @@ stdin.on('end', function onEnd () {
   }
 
   var modules = []
-  for (var key in packageNames) {
-    modules.push('  ' + key)
+  for (var packageName in packageNames) {
+    modules.push('  ' + packageName)
   }
   if (modules.length) {
+    modules.sort()
     console.log('\n\nnode_modules/')
     for (var moduleIndex = 0; moduleIndex < modules.length; moduleIndex++) {
       console.log(modules[moduleIndex])
